@@ -17,14 +17,11 @@
     --gray-dark: #1a1a1a;
     --border: rgba(255,255,255,0.1);
     --border-light: rgba(255,255,255,0.06);
-    
-    /* Font Families */
     --font-primary: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-mono: 'Space Mono', 'SF Mono', monospace;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
 
   body {
@@ -49,98 +46,60 @@
     transition: padding 0.3s;
   }
 
-  /* Logo Teks Styling */
   .nav-logo {
     display: flex; align-items: center; gap: 12px;
     text-decoration: none;
   }
 
   .logo-mark {
-    width: 32px;
-    height: 32px;
+    width: 32px; height: 32px;
     border: 2px solid var(--white);
     border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
   }
 
   .logo-mark::before {
-    content: '◆';
-    font-size: 14px;
-    color: var(--white);
-    line-height: 1;
+    content: '◆'; font-size: 14px; color: var(--white); line-height: 1;
   }
 
-  .logo-text {
-    display: flex;
-    align-items: baseline;
-    gap: 2px;
-  }
+  .logo-text { display: flex; align-items: baseline; gap: 2px; }
 
   .logo-main {
-    font-family: var(--font-primary);
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    color: var(--white);
-    line-height: 1;
+    font-family: var(--font-primary); font-size: 22px; font-weight: 700;
+    letter-spacing: -0.03em; color: var(--white); line-height: 1;
   }
 
   .logo-tld {
-    font-family: var(--font-primary);
-    font-size: 22px;
-    font-weight: 500;
-    letter-spacing: -0.03em;
-    color: var(--gray-dim);
-    line-height: 1;
+    font-family: var(--font-primary); font-size: 22px; font-weight: 500;
+    letter-spacing: -0.03em; color: var(--gray-dim); line-height: 1;
   }
 
-  .nav-links {
-    display: flex; gap: 8px; align-items: center;
-  }
+  .nav-links { display: flex; gap: 8px; align-items: center; }
 
   .nav-links a {
-    color: var(--gray-dim);
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    padding: 8px 16px;
-    border-radius: 6px;
-    transition: all 0.2s ease;
+    color: var(--gray-dim); text-decoration: none;
+    font-size: 13px; font-weight: 500; letter-spacing: 0.02em;
+    padding: 8px 16px; border-radius: 6px; transition: all 0.2s ease;
   }
 
-  .nav-links a:hover {
-    color: var(--white);
-    background: rgba(255,255,255,0.06);
-  }
+  .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.06); }
 
   .nav-cta {
-    color: var(--black) !important;
-    background: var(--white) !important;
+    color: var(--black) !important; background: var(--white) !important;
     font-weight: 600 !important;
   }
 
-  .nav-cta:hover {
-    background: var(--off-white) !important;
-    transform: translateY(-1px);
-  }
+  .nav-cta:hover { background: var(--off-white) !important; transform: translateY(-1px); }
 
   .hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    padding: 8px;
+    display: none; flex-direction: column; gap: 5px;
+    cursor: pointer; padding: 8px;
   }
 
   .hamburger span {
     display: block; width: 24px; height: 2px;
-    background: var(--white);
-    transition: transform 0.3s, opacity 0.3s;
+    background: var(--white); transition: transform 0.3s, opacity 0.3s;
   }
 
   .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -148,26 +107,18 @@
   .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
   .mobile-menu {
-    display: none;
-    flex-direction: column;
-    gap: 0;
+    display: none; flex-direction: column; gap: 0;
     background: rgba(8,8,8,0.97);
     position: fixed; top: 70px; left: 0; right: 0;
-    z-index: 99;
-    border-bottom: 1px solid var(--border);
-    padding: 16px 0;
+    z-index: 99; border-bottom: 1px solid var(--border); padding: 16px 0;
   }
 
   .mobile-menu.open { display: flex; }
 
   .mobile-menu a {
-    color: var(--gray-dim);
-    text-decoration: none;
-    font-size: 15px; 
-    font-weight: 500;
-    letter-spacing: 0.01em;
-    padding: 14px 40px;
-    border-bottom: 1px solid var(--border-light);
+    color: var(--gray-dim); text-decoration: none;
+    font-size: 15px; font-weight: 500; letter-spacing: 0.01em;
+    padding: 14px 40px; border-bottom: 1px solid var(--border-light);
     transition: color 0.2s, background 0.2s;
   }
 
@@ -184,42 +135,47 @@
     overflow: hidden;
   }
 
-  .hero-bg {
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(255,255,255,0.04) 0%, transparent 70%);
+  /* BRUTALIST SOUND CANVAS */
+  #soundCanvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     pointer-events: none;
+    z-index: 0;
+    opacity: 0.85;
   }
 
-  .hero-grid {
+  .hero-bg {
     position: absolute; inset: 0;
-    background-image:
-      linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
-    background-size: 60px 60px;
+    background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(255,255,255,0.03) 0%, transparent 70%);
     pointer-events: none;
-    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 70%);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .hero-badge {
     display: inline-flex; align-items: center; gap: 8px;
-    border: 1px solid var(--border);
-    border-radius: 100px;
-    padding: 8px 16px;
-    font-size: 11px; 
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--gray-dim);
-    margin-bottom: 32px;
-    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border); border-radius: 100px;
+    padding: 8px 16px; font-size: 11px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--gray-dim); margin-bottom: 32px;
+    background: rgba(8,8,8,0.7);
     font-family: var(--font-mono);
     animation: fadeUp 0.8s ease both;
+    backdrop-filter: blur(8px);
   }
 
   .hero-badge::before {
     content: ''; width: 6px; height: 6px;
-    background: var(--white);
-    border-radius: 50%;
+    background: var(--white); border-radius: 50%;
     animation: pulse 2s infinite;
   }
 
@@ -230,81 +186,67 @@
 
   .hero h1 {
     font-size: clamp(40px, 7vw, 84px);
-    font-weight: 700;
-    line-height: 1.05;
-    letter-spacing: -0.04em;
-    max-width: 900px;
-    margin-bottom: 24px;
-    animation: fadeUp 0.8s 0.1s ease both;
+    font-weight: 700; line-height: 1.05;
+    letter-spacing: -0.04em; max-width: 900px;
+    margin-bottom: 24px; animation: fadeUp 0.8s 0.1s ease both;
+    text-shadow: 0 2px 40px rgba(0,0,0,0.8);
   }
 
   .hero h1 em {
-    font-style: normal;
-    color: var(--gray-dim);
-    font-weight: 500;
+    font-style: normal; color: var(--gray-dim); font-weight: 500;
   }
 
   .hero-sub {
-    font-size: clamp(15px, 2vw, 17px);
-    color: var(--gray-dim);
-    max-width: 480px;
-    line-height: 1.7;
-    margin-bottom: 48px;
-    font-weight: 400;
-    animation: fadeUp 0.8s 0.2s ease both;
+    font-size: clamp(15px, 2vw, 17px); color: var(--gray-dim);
+    max-width: 480px; line-height: 1.7; margin-bottom: 48px;
+    font-weight: 400; animation: fadeUp 0.8s 0.2s ease both;
+    text-shadow: 0 1px 20px rgba(0,0,0,0.9);
   }
 
   .hero-actions {
-    display: flex; gap: 12px; flex-wrap: wrap;
-    justify-content: center;
+    display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;
     animation: fadeUp 0.8s 0.3s ease both;
   }
 
-  .btn-primary {
-    padding: 14px 28px;
-    background: var(--white);
-    color: var(--black);
-    font-family: var(--font-primary);
-    font-size: 14px; 
-    font-weight: 600;
-    letter-spacing: 0.01em;
-    border: none; 
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.2s ease;
+  .sound-hint {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.2);
+    z-index: 2;
+    animation: fadeUp 1s 1s ease both;
+    pointer-events: none;
   }
 
-  .btn-primary:hover { 
-    background: var(--off-white); 
-    transform: translateY(-1px); 
+  .btn-primary {
+    padding: 14px 28px; background: var(--white); color: var(--black);
+    font-family: var(--font-primary); font-size: 14px; font-weight: 600;
+    letter-spacing: 0.01em; border: none; border-radius: 8px;
+    cursor: pointer; transition: all 0.2s ease;
   }
+
+  .btn-primary:hover { background: var(--off-white); transform: translateY(-1px); }
 
   .btn-outline {
-    padding: 14px 28px;
-    background: transparent;
-    color: var(--white);
-    font-family: var(--font-primary);
-    font-size: 14px; 
-    font-weight: 600;
-    letter-spacing: 0.01em;
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.2s ease;
+    padding: 14px 28px; background: transparent; color: var(--white);
+    font-family: var(--font-primary); font-size: 14px; font-weight: 600;
+    letter-spacing: 0.01em; border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px; cursor: pointer; transition: all 0.2s ease;
   }
 
   .btn-outline:hover {
     border-color: rgba(255,255,255,0.5);
-    background: rgba(255,255,255,0.05);
-    transform: translateY(-1px);
+    background: rgba(255,255,255,0.05); transform: translateY(-1px);
   }
 
   .wallet-status {
-    margin-top: 20px;
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--gray-dim);
-    min-height: 18px;
+    margin-top: 20px; font-family: var(--font-mono); font-size: 12px;
+    color: var(--gray-dim); min-height: 18px;
     animation: fadeUp 0.8s 0.4s ease both;
   }
 
@@ -316,32 +258,22 @@
   /* ── TICKER ── */
   .ticker-wrap {
     overflow: hidden;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    padding: 16px 0;
-    background: var(--gray-dark);
+    border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    padding: 16px 0; background: var(--gray-dark);
   }
 
   .ticker {
     display: flex; gap: 60px;
-    animation: ticker 28s linear infinite;
-    white-space: nowrap;
+    animation: ticker 28s linear infinite; white-space: nowrap;
   }
 
   .ticker span {
-    font-size: 12px; 
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--gray-dim);
-    flex-shrink: 0;
-    font-family: var(--font-mono);
+    font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--gray-dim);
+    flex-shrink: 0; font-family: var(--font-mono);
   }
 
-  .ticker span.dot { 
-    color: var(--white); 
-    opacity: 0.3; 
-  }
+  .ticker span.dot { color: var(--white); opacity: 0.3; }
 
   @keyframes ticker {
     from { transform: translateX(0); }
@@ -350,256 +282,141 @@
 
   /* ── SECTIONS ── */
   section {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 100px 32px;
+    max-width: 1100px; margin: 0 auto; padding: 100px 32px;
   }
 
   .section-label {
-    display: inline-block;
-    font-size: 12px; 
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--gray-dim);
-    margin-bottom: 20px;
-    font-family: var(--font-mono);
+    display: inline-block; font-size: 12px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gray-dim); margin-bottom: 20px; font-family: var(--font-mono);
   }
 
   .section-title {
-    font-size: clamp(32px, 5vw, 48px);
-    font-weight: 700;
-    line-height: 1.1;
-    letter-spacing: -0.03em;
-    margin-bottom: 16px;
+    font-size: clamp(32px, 5vw, 48px); font-weight: 700;
+    line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 16px;
   }
 
   .section-desc {
-    font-size: 16px;
-    color: var(--gray-dim);
-    max-width: 520px;
-    line-height: 1.7;
-    margin-bottom: 56px;
-    font-weight: 400;
+    font-size: 16px; color: var(--gray-dim); max-width: 520px;
+    line-height: 1.7; margin-bottom: 56px; font-weight: 400;
   }
 
-  hr.section-line {
-    border: none;
-    border-top: 1px solid var(--border);
-    margin: 0;
-  }
+  hr.section-line { border: none; border-top: 1px solid var(--border); margin: 0; }
 
   /* ── HOW IT WORKS ── */
   .steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1px; background: var(--border); border: 1px solid var(--border);
+    border-radius: 12px; overflow: hidden;
   }
 
-  .step {
-    background: var(--black);
-    padding: 36px 28px;
-    transition: background 0.2s;
-  }
-
+  .step { background: var(--black); padding: 36px 28px; transition: background 0.2s; }
   .step:hover { background: var(--gray-dark); }
 
   .step-num {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--gray-dim);
-    letter-spacing: 0.08em;
-    margin-bottom: 16px;
-    font-weight: 400;
+    font-family: var(--font-mono); font-size: 11px; color: var(--gray-dim);
+    letter-spacing: 0.08em; margin-bottom: 16px; font-weight: 400;
   }
 
-  .step-title {
-    font-size: 18px; 
-    font-weight: 600;
-    margin-bottom: 10px;
-    letter-spacing: -0.01em;
-  }
+  .step-title { font-size: 18px; font-weight: 600; margin-bottom: 10px; letter-spacing: -0.01em; }
 
-  .step-desc {
-    font-size: 14px;
-    color: var(--gray-dim);
-    line-height: 1.6;
-    font-weight: 400;
-  }
+  .step-desc { font-size: 14px; color: var(--gray-dim); line-height: 1.6; font-weight: 400; }
 
   /* ── DROPS ── */
   .drops-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1px; background: var(--border); border: 1px solid var(--border);
+    border-radius: 12px; overflow: hidden;
   }
 
   .drop-card {
-    background: var(--black);
-    padding: 32px;
-    display: flex; flex-direction: column;
-    gap: 16px;
-    transition: background 0.2s;
+    background: var(--black); padding: 32px;
+    display: flex; flex-direction: column; gap: 16px; transition: background 0.2s;
   }
 
   .drop-card:hover { background: var(--gray-dark); }
 
   .drop-tag {
     display: inline-flex; align-items: center; gap: 6px;
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--gray-dim);
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    font-weight: 400;
+    font-family: var(--font-mono); font-size: 11px; color: var(--gray-dim);
+    letter-spacing: 0.06em; text-transform: uppercase; font-weight: 400;
   }
 
   .drop-tag::before {
     content: ''; width: 5px; height: 5px;
-    background: var(--white);
-    border-radius: 50%;
+    background: var(--white); border-radius: 50%;
   }
 
-  .drop-name { 
-    font-size: 22px; 
-    font-weight: 600; 
-    line-height: 1.25;
-    letter-spacing: -0.01em;
-  }
+  .drop-name { font-size: 22px; font-weight: 600; line-height: 1.25; letter-spacing: -0.01em; }
 
-  .drop-meta { 
-    font-size: 13px; 
-    color: var(--gray-dim); 
-    font-family: var(--font-mono);
-    font-weight: 400;
-  }
+  .drop-meta { font-size: 13px; color: var(--gray-dim); font-family: var(--font-mono); font-weight: 400; }
 
-  .drop-price {
-    font-size: 28px; 
-    font-weight: 700;
-    letter-spacing: -0.02em;
-  }
+  .drop-price { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; }
 
-  .drop-price span { 
-    font-size: 14px; 
-    font-weight: 500; 
-    color: var(--gray-dim); 
-  }
+  .drop-price span { font-size: 14px; font-weight: 500; color: var(--gray-dim); }
 
-  .drop-actions { 
-    display: flex; 
-    gap: 10px; 
-    align-items: center; 
-    margin-top: 8px; 
-  }
+  .drop-actions { display: flex; gap: 10px; align-items: center; margin-top: 8px; }
 
   .tx-status {
-    font-family: var(--font-mono);
-    font-size: 11px; 
-    color: var(--gray-dim);
-    word-break: break-all;
-    margin-top: 8px;
+    font-family: var(--font-mono); font-size: 11px; color: var(--gray-dim);
+    word-break: break-all; margin-top: 8px;
   }
 
   .status-live {
     display: inline-flex; align-items: center; gap: 6px;
-    font-size: 11px; 
-    color: var(--white);
-    font-family: var(--font-mono);
-    letter-spacing: 0.06em;
-    font-weight: 400;
+    font-size: 11px; color: var(--white); font-family: var(--font-mono);
+    letter-spacing: 0.06em; font-weight: 400;
   }
 
   .status-live::before {
     content: ''; width: 6px; height: 6px;
-    background: var(--white);
-    border-radius: 50%;
-    animation: pulse 2s infinite;
+    background: var(--white); border-radius: 50%; animation: pulse 2s infinite;
   }
 
   /* ── ECONOMICS ── */
   .economics-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px;
+    background: var(--border); border: 1px solid var(--border);
+    border-radius: 12px; overflow: hidden;
   }
 
   .econ-block {
-    background: var(--black);
-    padding: 40px 32px;
-    text-align: center;
-    transition: background 0.2s;
+    background: var(--black); padding: 40px 32px;
+    text-align: center; transition: background 0.2s;
   }
 
   .econ-block:hover { background: var(--gray-dark); }
 
-  .econ-num {
-    font-size: clamp(40px, 6vw, 64px);
-    font-weight: 700;
-    letter-spacing: -0.04em;
-    margin-bottom: 8px;
-  }
+  .econ-num { font-size: clamp(40px, 6vw, 64px); font-weight: 700; letter-spacing: -0.04em; margin-bottom: 8px; }
 
   .econ-label {
-    font-size: 12px;
-    color: var(--gray-dim);
-    font-family: var(--font-mono);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    font-weight: 400;
+    font-size: 12px; color: var(--gray-dim); font-family: var(--font-mono);
+    letter-spacing: 0.08em; text-transform: uppercase; font-weight: 400;
   }
 
   /* ── NETWORK ── */
   .network-block {
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 40px;
-    display: flex; align-items: center;
-    justify-content: space-between; gap: 32px;
-    flex-wrap: wrap;
+    border: 1px solid var(--border); border-radius: 12px; padding: 40px;
+    display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;
   }
 
-  .network-info h3 { 
-    font-size: 20px; 
-    font-weight: 600; 
-    margin-bottom: 8px;
-    letter-spacing: -0.01em;
-  }
-
-  .network-info p { 
-    color: var(--gray-dim); 
-    font-size: 14px; 
-    font-family: var(--font-mono);
-    font-weight: 400;
-  }
+  .network-info h3 { font-size: 20px; font-weight: 600; margin-bottom: 8px; letter-spacing: -0.01em; }
+  .network-info p { color: var(--gray-dim); font-size: 14px; font-family: var(--font-mono); font-weight: 400; }
 
   .network-badge {
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 10px 16px;
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--gray-dim);
-    background: var(--gray-dark);
-    font-weight: 400;
+    border: 1px solid var(--border); border-radius: 6px;
+    padding: 8px 14px; font-size: 12px; font-family: var(--font-mono);
+    color: var(--gray-dim); letter-spacing: 0.06em; font-weight: 400;
   }
 
-  /* ── TEAM ── */
-  .team-grid {
+  /* ── PARTNERS ── */
+  #partners {
+    max-width: 1100px; margin: 0 auto; padding: 100px 32px;
+  }
+
+  .partners-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1px;
     background: var(--border);
     border: 1px solid var(--border);
@@ -607,224 +424,189 @@
     overflow: hidden;
   }
 
-  .team-card {
+  .partner-card {
     background: var(--black);
-    padding: 28px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     transition: background 0.2s;
+    position: relative;
+  }
+
+  .partner-card:hover { background: var(--gray-dark); }
+
+  .partner-logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 4px;
+  }
+
+  .partner-icon {
+    width: 40px; height: 40px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    background: var(--gray-dark);
+    flex-shrink: 0;
+    transition: border-color 0.2s;
+  }
+
+  .partner-card:hover .partner-icon {
+    border-color: rgba(255,255,255,0.25);
+  }
+
+  .partner-name {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--white);
+  }
+
+  .partner-category {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray-dim);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 3px 8px;
+    width: fit-content;
+  }
+
+  .partner-desc {
+    font-size: 13px;
+    color: var(--gray-dim);
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+  .partner-region {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: rgba(255,255,255,0.2);
+    letter-spacing: 0.06em;
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-light);
+  }
+
+  /* ── TEAM ── */
+  .team-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1px; background: var(--border); border: 1px solid var(--border);
+    border-radius: 12px; overflow: hidden;
+  }
+
+  .team-card {
+    background: var(--black); padding: 28px 24px; transition: background 0.2s;
   }
 
   .team-card:hover { background: var(--gray-dark); }
 
-  .team-name { 
-    font-size: 16px; 
-    font-weight: 600; 
-    margin-bottom: 4px;
-    letter-spacing: -0.01em;
-  }
+  .team-name { font-size: 16px; font-weight: 600; margin-bottom: 4px; letter-spacing: -0.01em; }
 
-  .team-role {
-    font-size: 13px;
-    color: var(--gray-dim);
-    font-family: var(--font-mono);
-    letter-spacing: 0.04em;
-    font-weight: 400;
-  }
+  .team-role { font-size: 13px; color: var(--gray-dim); font-family: var(--font-mono); letter-spacing: 0.04em; font-weight: 400; }
 
   /* ── APPLY ── */
   .apply-wrap {
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 48px;
-    max-width: 680px;
+    border: 1px solid var(--border); border-radius: 12px;
+    padding: 48px; max-width: 680px;
   }
 
   .form-group { margin-bottom: 24px; }
 
   .form-label {
-    display: block;
-    font-size: 12px; 
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--gray-dim);
-    margin-bottom: 10px;
-    font-family: var(--font-mono);
+    display: block; font-size: 12px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--gray-dim); margin-bottom: 10px; font-family: var(--font-mono);
   }
 
   .form-input, .form-textarea {
-    width: 100%;
-    background: var(--gray-dark);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 14px 16px;
-    color: var(--white);
-    font-family: var(--font-primary);
-    font-size: 15px;
-    font-weight: 400;
-    outline: none;
-    transition: all 0.2s ease;
-    resize: vertical;
+    width: 100%; background: var(--gray-dark); border: 1px solid var(--border);
+    border-radius: 8px; padding: 14px 16px; color: var(--white);
+    font-family: var(--font-primary); font-size: 15px; font-weight: 400;
+    outline: none; transition: all 0.2s ease; resize: vertical;
   }
 
   .form-input:focus, .form-textarea:focus {
-    border-color: rgba(255,255,255,0.3);
-    background: rgba(255,255,255,0.03);
+    border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.03);
   }
 
-  .form-input::placeholder, .form-textarea::placeholder { 
-    color: rgba(255,255,255,0.25); 
-    font-weight: 400;
-  }
-
+  .form-input::placeholder, .form-textarea::placeholder { color: rgba(255,255,255,0.25); font-weight: 400; }
   .form-textarea { min-height: 120px; }
 
-  .apply-note {
-    font-size: 13px; 
-    color: var(--gray-dim);
-    font-family: var(--font-mono);
-    margin-top: 16px;
-    font-weight: 400;
-  }
+  .apply-note { font-size: 13px; color: var(--gray-dim); font-family: var(--font-mono); margin-top: 16px; font-weight: 400; }
 
   /* ── LEGAL ── */
-  .legal-block {
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 36px;
-  }
+  .legal-block { border: 1px solid var(--border); border-radius: 12px; padding: 36px; }
 
-  .legal-block p {
-    font-size: 14px;
-    color: var(--gray-dim);
-    line-height: 1.8;
-    font-family: var(--font-primary);
-    font-weight: 400;
-  }
+  .legal-block p { font-size: 14px; color: var(--gray-dim); line-height: 1.8; font-family: var(--font-primary); font-weight: 400; }
 
   /* ── FOOTER ── */
   footer {
-    border-top: 1px solid var(--border);
-    padding: 48px 40px;
-    display: flex; align-items: center;
-    justify-content: space-between;
+    border-top: 1px solid var(--border); padding: 48px 40px;
+    display: flex; align-items: center; justify-content: space-between;
     flex-wrap: wrap; gap: 28px;
   }
 
-  .footer-left {
-    display: flex; flex-direction: column; gap: 12px;
-  }
+  .footer-left { display: flex; flex-direction: column; gap: 12px; }
 
-  .footer-logo {
-    display: flex; align-items: center; gap: 10px;
-  }
+  .footer-logo { display: flex; align-items: center; gap: 10px; }
 
   .footer-logo-mark {
-    width: 24px;
-    height: 24px;
-    border: 1.5px solid var(--white);
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 24px; height: 24px; border: 1.5px solid var(--white);
+    border-radius: 6px; display: flex; align-items: center; justify-content: center;
   }
 
-  .footer-logo-mark::before {
-    content: '◆';
-    font-size: 10px;
-    color: var(--white);
-  }
+  .footer-logo-mark::before { content: '◆'; font-size: 10px; color: var(--white); }
 
-  .footer-logo-text {
-    display: flex;
-    align-items: baseline;
-    gap: 2px;
-  }
+  .footer-logo-text { display: flex; align-items: baseline; gap: 2px; }
 
-  .footer-logo-main {
-    font-family: var(--font-primary);
-    font-size: 18px;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    color: var(--white);
-  }
+  .footer-logo-main { font-family: var(--font-primary); font-size: 18px; font-weight: 700; letter-spacing: -0.02em; color: var(--white); }
 
-  .footer-logo-tld {
-    font-family: var(--font-primary);
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: -0.02em;
-    color: var(--gray-dim);
-  }
+  .footer-logo-tld { font-family: var(--font-primary); font-size: 18px; font-weight: 500; letter-spacing: -0.02em; color: var(--gray-dim); }
 
-  .footer-copy {
-    font-size: 13px; 
-    color: var(--gray-dim);
-    font-family: var(--font-mono);
-    font-weight: 400;
-  }
+  .footer-copy { font-size: 13px; color: var(--gray-dim); font-family: var(--font-mono); font-weight: 400; }
 
-  .footer-right {
-    display: flex; flex-direction: column; align-items: flex-end; gap: 16px;
-  }
+  .footer-right { display: flex; flex-direction: column; align-items: flex-end; gap: 16px; }
 
-  .footer-links {
-    display: flex; gap: 24px;
-  }
+  .footer-links { display: flex; gap: 24px; }
 
   .footer-links a {
-    color: var(--gray-dim);
-    text-decoration: none;
-    font-size: 13px; 
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    transition: color 0.2s;
+    color: var(--gray-dim); text-decoration: none; font-size: 13px;
+    font-weight: 500; letter-spacing: 0.02em; transition: color 0.2s;
   }
 
   .footer-links a:hover { color: var(--white); }
 
-  .social-row {
-    display: flex; align-items: center; gap: 14px;
-  }
+  .social-row { display: flex; align-items: center; gap: 14px; }
 
   .social-row a {
     display: flex; align-items: center; gap: 6px;
-    color: var(--gray-dim);
-    text-decoration: none;
-    font-size: 13px; 
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    transition: all 0.2s;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 8px 14px;
+    color: var(--gray-dim); text-decoration: none; font-size: 13px;
+    font-weight: 500; letter-spacing: 0.02em; transition: all 0.2s;
+    border: 1px solid var(--border); border-radius: 6px; padding: 8px 14px;
   }
 
-  .social-row a:hover { 
-    color: var(--white); 
-    border-color: rgba(255,255,255,0.25); 
-  }
+  .social-row a:hover { color: var(--white); border-color: rgba(255,255,255,0.25); }
 
-  .orynth-badge { 
-    display: flex; align-items: center; 
-  }
+  .orynth-badge { display: flex; align-items: center; }
 
-  .orynth-badge img { 
-    height: 36px; 
-    opacity: 0.8;
-    transition: opacity 0.2s;
-  }
-
-  .orynth-badge img:hover {
-    opacity: 1;
-  }
+  .orynth-badge img { height: 36px; opacity: 0.8; transition: opacity 0.2s; }
+  .orynth-badge img:hover { opacity: 1; }
 
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     nav { padding: 16px 20px; }
     .nav-links { display: none; }
     .hamburger { display: flex; }
-
-    section { padding: 72px 20px; }
+    section, #partners { padding: 72px 20px; }
     .economics-row { grid-template-columns: 1fr; }
     .econ-block { padding: 28px 20px; }
     .network-block { flex-direction: column; align-items: flex-start; }
@@ -832,10 +614,8 @@
     footer { flex-direction: column; align-items: flex-start; padding: 36px 20px; }
     .footer-right { align-items: flex-start; }
     .hero { padding: 100px 20px 60px; }
-    
-    .logo-main, .logo-tld {
-      font-size: 20px;
-    }
+    .logo-main, .logo-tld { font-size: 20px; }
+    .partners-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -853,10 +633,11 @@
   <div class="nav-links">
     <a href="#drops">Drops</a>
     <a href="#how">How It Works</a>
+    <a href="#partners">Partners</a>
     <a href="#team">Team</a>
     <a href="#apply">Apply</a>
     <a href="https://x.com/synthlabfun" target="_blank" rel="noopener">𝕏</a>
-    <a href="#apply" class="nav-cta">Connect Wallet</a>
+    <a href="#apply" class="nav-cta" onclick="connectWallet()">Connect Wallet</a>
   </div>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -866,6 +647,7 @@
 <div class="mobile-menu" id="mobileMenu">
   <a href="#drops" onclick="closeMenu()">Drops</a>
   <a href="#how" onclick="closeMenu()">How It Works</a>
+  <a href="#partners" onclick="closeMenu()">Partners</a>
   <a href="#team" onclick="closeMenu()">Team</a>
   <a href="#apply" onclick="closeMenu()">Apply as Artist</a>
   <a href="#legal" onclick="closeMenu()">Legal</a>
@@ -873,17 +655,23 @@
 </div>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="heroSection">
+  <!-- BRUTALIST INTERACTIVE SOUND CANVAS -->
+  <canvas id="soundCanvas"></canvas>
   <div class="hero-bg"></div>
-  <div class="hero-grid"></div>
-  <div class="hero-badge">Web3 Music on Solana · Asia</div>
-  <h1>Curated Sound.<br><em>Shared Ownership.</em></h1>
-  <p class="hero-sub">Web3 music aggregator built for Asian artists — mint, own, and earn from music NFTs on Solana.</p>
-  <div class="hero-actions">
-    <button class="btn-primary" onclick="connectWallet()">Connect Wallet</button>
-    <button class="btn-outline" onclick="document.getElementById('drops').scrollIntoView({behavior:'smooth'})">Discover Drops</button>
+
+  <div class="hero-content">
+    <div class="hero-badge">Web3 Music on Solana · Asia</div>
+    <h1>Curated Sound.<br><em>Shared Ownership.</em></h1>
+    <p class="hero-sub">Web3 music aggregator built for Asian artists — mint, own, and earn from music NFTs on Solana.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="connectWallet()">Connect Wallet</button>
+      <button class="btn-outline" onclick="document.getElementById('drops').scrollIntoView({behavior:'smooth'})">Discover Drops</button>
+    </div>
+    <p class="wallet-status" id="wallet"></p>
   </div>
-  <p class="wallet-status" id="wallet"></p>
+
+  <div class="sound-hint">Move cursor to warp sound field</div>
 </section>
 
 <!-- TICKER -->
@@ -1020,6 +808,98 @@
 
 <hr class="section-line">
 
+<!-- PARTNERS -->
+<section id="partners">
+  <div class="section-label">Ecosystem</div>
+  <h2 class="section-title">Partners</h2>
+  <p class="section-desc">Building the future of Asian music onchain together — with exchanges, labels, DAOs, and infrastructure providers.</p>
+  <div class="partners-grid">
+
+    <div class="partner-card">
+      <div class="partner-logo-wrap">
+        <div class="partner-icon">◎</div>
+        <div class="partner-name">Metaplex</div>
+      </div>
+      <div class="partner-category">NFT Infrastructure</div>
+      <div class="partner-desc">Official token standard partner. All Synthlab drops use Metaplex's NFT standard for full ecosystem compatibility.</div>
+      <div class="partner-region">📍 Global</div>
+    </div>
+
+    <div class="partner-card">
+      <div class="partner-logo-wrap">
+        <div class="partner-icon">⬡</div>
+        <div class="partner-name">Orca Protocol</div>
+      </div>
+      <div class="partner-category">DeFi / Liquidity</div>
+      <div class="partner-desc">Integration with Orca's AMM enables secondary market liquidity for fractional music NFT ownership.</div>
+      <div class="partner-region">📍 Global · Solana</div>
+    </div>
+
+    <div class="partner-card">
+      <div class="partner-logo-wrap">
+        <div class="partner-icon">🎵</div>
+        <div class="partner-name">Avex Digital</div>
+      </div>
+      <div class="partner-category">Music Label</div>
+      <div class="partner-desc">Japan's leading digital music label providing curated artist pipelines and A&R support for the Tokyo market.</div>
+      <div class="partner-region">📍 Tokyo, Japan</div>
+    </div>
+
+    <div class="partner-card">
+      <div class="partner-logo-wrap">
+        <div class="partner-icon">◈</div>
+        <div class="partner-name">Naver Web3</div>
+      </div>
+      <div class="partner-category">Distribution</div>
+      <div class="partner-desc">Strategic partnership for K-music distribution and Web3 wallet onboarding across the Korean market.</div>
+      <div class="partner-region">📍 Seoul, Korea</div>
+    </div>
+
+    <div class="partner-card">
+      <div class="partner-logo-wrap">
+        <div class="partner-icon">🔊</div>
+        <div class="partner-name">SoundDAO Asia</div>
+      </div>
+      <div class="partner-category">Music DAO</div>
+      <div class="partner-desc">Decentralized collective of 400+ Asian music producers co-governing curation decisions and treasury allocation.</div>
+      <div class="partner-region">📍 Hong Kong · Singapore</div>
+    </div>
+
+    <div class="partner-card">
+      <div class="partner-logo-wrap">
+        <div class="partner-icon">⬢</div>
+        <div class="partner-name">Phantom Wallet</div>
+      </div>
+      <div class="partner-category">Wallet</div>
+      <div class="partner-desc">Preferred wallet partner for all Synthlab transactions, providing a seamless collector onboarding experience.</div>
+      <div class="partner-region">📍 Global</div>
+    </div>
+
+    <div class="partner-card">
+      <div class="partner-logo-wrap">
+        <div class="partner-icon">🏮</div>
+        <div class="partner-name">NetEase Cloud Music</div>
+      </div>
+      <div class="partner-category">Streaming Platform</div>
+      <div class="partner-desc">China's largest music streaming platform bridging Web2 audiences to onchain ownership for Chinese artists.</div>
+      <div class="partner-region">📍 Shanghai, China</div>
+    </div>
+
+    <div class="partner-card">
+      <div class="partner-logo-wrap">
+        <div class="partner-icon">◇</div>
+        <div class="partner-name">Crossmint</div>
+      </div>
+      <div class="partner-category">Minting Infrastructure</div>
+      <div class="partner-desc">Credit card-based NFT minting solution enabling Web2 users to purchase Synthlab drops without a crypto wallet.</div>
+      <div class="partner-region">📍 Global</div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="section-line">
+
 <!-- TEAM -->
 <section id="team">
   <div class="section-label">People</div>
@@ -1111,9 +991,7 @@
   </div>
   <div class="footer-right">
     <div class="social-row">
-      <a href="https://x.com/synthlabfun" target="_blank" rel="noopener">
-        𝕏 @synthlabfun
-      </a>
+      <a href="https://x.com/synthlabfun" target="_blank" rel="noopener">𝕏 @synthlabfun</a>
       <div class="orynth-badge">
         <a href="https://orynth.dev/projects/synthlab" target="_blank" rel="noopener">
           <img src="https://orynth.dev/api/badge/synthlab?theme=dark&style=default" alt="Featured on Orynth" width="140" height="44">
@@ -1123,6 +1001,7 @@
     <div class="footer-links">
       <a href="#drops">Drops</a>
       <a href="#how">How It Works</a>
+      <a href="#partners">Partners</a>
       <a href="#apply">Apply</a>
       <a href="#legal">Legal</a>
     </div>
@@ -1131,6 +1010,167 @@
 
 <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>
 <script>
+/* ─── BRUTALIST INTERACTIVE SOUND EXPERIMENT ─── */
+(function() {
+  const canvas = document.getElementById('soundCanvas');
+  const ctx = canvas.getContext('2d');
+  const hero = document.getElementById('heroSection');
+
+  let W, H, mouse = { x: 0.5, y: 0.5 }, t = 0;
+  let animId;
+
+  function resize() {
+    W = canvas.width = hero.offsetWidth;
+    H = canvas.height = hero.offsetHeight;
+  }
+
+  window.addEventListener('resize', resize);
+  resize();
+
+  // Track mouse within hero
+  hero.addEventListener('mousemove', e => {
+    const r = hero.getBoundingClientRect();
+    mouse.x = (e.clientX - r.left) / r.width;
+    mouse.y = (e.clientY - r.top) / r.height;
+  });
+
+  // Touch support
+  hero.addEventListener('touchmove', e => {
+    e.preventDefault();
+    const r = hero.getBoundingClientRect();
+    const touch = e.touches[0];
+    mouse.x = (touch.clientX - r.left) / r.width;
+    mouse.y = (touch.clientY - r.top) / r.height;
+  }, { passive: false });
+
+  // Brutalist palette: raw white lines on black
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+
+    const mx = mouse.x;
+    const my = mouse.y;
+    const influence = 0.45;
+
+    // ── Layer 1: Horizontal brutalist waveforms ──
+    const ROWS = 18;
+    for (let r = 0; r < ROWS; r++) {
+      const yBase = (r / (ROWS - 1)) * H;
+      const rowFrac = r / ROWS;
+
+      // Frequency and amplitude modulated by mouse
+      const freq = 2.5 + mx * 6 + rowFrac * 2;
+      const amp = 8 + my * 60 * Math.sin(rowFrac * Math.PI) + Math.abs(mx - 0.5) * 40;
+      const phase = t * (0.4 + rowFrac * 0.6) + mx * Math.PI * 2;
+
+      // Distance from mouse row
+      const distY = Math.abs(yBase / H - my);
+      const proximity = Math.max(0, 1 - distY * 3.5);
+      const alpha = 0.04 + proximity * 0.22 + rowFrac * 0.02;
+      const lineW = 0.5 + proximity * 1.8;
+
+      ctx.beginPath();
+      ctx.strokeStyle = `rgba(255,255,255,${alpha})`;
+      ctx.lineWidth = lineW;
+
+      for (let x = 0; x <= W; x += 2) {
+        const xFrac = x / W;
+        const distX = Math.abs(xFrac - mx);
+        const proximityX = Math.max(0, 1 - distX * 2);
+
+        const wave1 = Math.sin(xFrac * freq * Math.PI * 2 - phase) * amp;
+        const wave2 = Math.sin(xFrac * freq * 0.5 * Math.PI * 2 + phase * 0.7) * amp * 0.4;
+        const wave3 = Math.sin(xFrac * freq * 3 * Math.PI * 2 - phase * 1.3) * amp * 0.15 * proximityX;
+
+        const y = yBase + wave1 + wave2 + wave3;
+
+        if (x === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+    }
+
+    // ── Layer 2: Vertical frequency bars (brutalist grid) ──
+    const COLS = 32;
+    for (let c = 0; c < COLS; c++) {
+      const xPos = (c / (COLS - 1)) * W;
+      const colFrac = c / COLS;
+
+      const distX = Math.abs(colFrac - mx);
+      const proximity = Math.max(0, 1 - distX * 2.5);
+
+      const barH = (12 + proximity * 120 + Math.sin(t * 1.5 + colFrac * 8) * 20 + my * 40) * 0.5;
+      const alpha = 0.03 + proximity * 0.12;
+
+      ctx.fillStyle = `rgba(255,255,255,${alpha})`;
+      const barW = 1 + proximity * 2;
+      ctx.fillRect(xPos - barW / 2, H / 2 - barH / 2, barW, barH);
+    }
+
+    // ── Layer 3: Oscilloscope crosshair at mouse ──
+    const cx = mx * W;
+    const cy = my * H;
+
+    // Horizontal scan line
+    ctx.beginPath();
+    ctx.strokeStyle = 'rgba(255,255,255,0.06)';
+    ctx.lineWidth = 1;
+    ctx.setLineDash([4, 8]);
+    ctx.moveTo(0, cy);
+    ctx.lineTo(W, cy);
+    ctx.stroke();
+
+    // Vertical scan line
+    ctx.beginPath();
+    ctx.moveTo(cx, 0);
+    ctx.lineTo(cx, H);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Pulse circle at cursor
+    const pulseR = 20 + Math.sin(t * 3) * 6;
+    ctx.beginPath();
+    ctx.arc(cx, cy, pulseR, 0, Math.PI * 2);
+    ctx.strokeStyle = `rgba(255,255,255,0.15)`;
+    ctx.lineWidth = 1;
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(cx, cy, 3, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(255,255,255,0.4)';
+    ctx.fill();
+
+    // ── Layer 4: Noise grain overlay (brutalist texture) ──
+    if (Math.random() > 0.3) {
+      for (let i = 0; i < 60; i++) {
+        const gx = Math.random() * W;
+        const gy = Math.random() * H;
+        const gs = Math.random() * 1.5;
+        ctx.fillStyle = `rgba(255,255,255,${Math.random() * 0.03})`;
+        ctx.fillRect(gx, gy, gs, gs);
+      }
+    }
+
+    t += 0.016;
+    animId = requestAnimationFrame(draw);
+  }
+
+  // Only run when hero visible
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        if (!animId) draw();
+      } else {
+        cancelAnimationFrame(animId);
+        animId = null;
+      }
+    });
+  });
+  observer.observe(hero);
+
+  draw();
+})();
+
+/* ─── NAV + WALLET + MINT ─── */
 let walletAddr = "";
 
 function toggleMenu() {
@@ -1145,7 +1185,6 @@ function closeMenu() {
   document.getElementById('mobileMenu').classList.remove('open');
 }
 
-// Compact nav on scroll
 window.addEventListener('scroll', () => {
   const nav = document.getElementById('nav');
   if (window.scrollY > 60) {
