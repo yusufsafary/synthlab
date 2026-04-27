@@ -746,6 +746,10 @@
         <span class="htc-label">Volume</span>
         <span class="htc-value">142 SOL</span>
       </div>
+      <div class="htc-item" id="htc-countdown-wrap">
+        <span class="htc-label">$SYNTH Launch</span>
+        <span class="htc-value" id="htc-countdown" style="color:#fff;letter-spacing:0.08em;">--:--:--</span>
+      </div>
     </div>
   </div>
 
@@ -1302,6 +1306,48 @@ async function mint(txId) {
     statusEl.innerText = "Transaction failed: " + (e.message || "unknown error");
   }
 }
+
+/* ─── $SYNTH LAUNCH COUNTDOWN ─── */
+(function() {
+  const launchUTC = new Date('2026-04-27T13:15:00Z');
+
+  function pad(n) { return String(n).padStart(2, '0'); }
+
+  function tick() {
+    const now = new Date();
+    const diff = launchUTC - now;
+    const el = document.getElementById('htc-countdown');
+    const wrap = document.getElementById('htc-countdown-wrap');
+    if (!el) return;
+
+    if (diff <= 0) {
+      el.textContent = 'LIVE NOW';
+      el.style.color = '#fff';
+      el.style.animation = 'pulse 1s infinite';
+      if (wrap) {
+        const dot = document.createElement('span');
+        dot.className = 'htc-dot';
+        dot.style.marginRight = '5px';
+        if (!wrap.querySelector('.htc-dot')) el.prepend(dot);
+      }
+      return;
+    }
+
+    const h = Math.floor(diff / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    el.textContent = pad(h) + ':' + pad(m) + ':' + pad(s);
+
+    // pulse red when under 5 minutes
+    if (diff < 300000) {
+      el.style.color = '#ff4444';
+    }
+
+    setTimeout(tick, 1000);
+  }
+
+  tick();
+})();
 
 function submitApplication() {
   const name = document.getElementById('artistName').value.trim();
