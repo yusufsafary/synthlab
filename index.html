@@ -255,6 +255,60 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
+  /* ── HERO TICKER CARD ── */
+  .hero-ticker-card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 36px;
+    padding: 14px 20px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: rgba(8,8,8,0.75);
+    backdrop-filter: blur(10px);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    animation: fadeUp 0.8s 0.5s ease both;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .htc-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    padding: 0 12px;
+    border-right: 1px solid var(--border);
+  }
+
+  .htc-item:last-child { border-right: none; }
+
+  .htc-label {
+    color: var(--gray-dim);
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .htc-value {
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .htc-dot {
+    display: inline-block;
+    width: 6px; height: 6px;
+    background: var(--white);
+    border-radius: 50%;
+    margin-right: 5px;
+    animation: pulse 2s infinite;
+    vertical-align: middle;
+  }
+
   /* ── TICKER ── */
   .ticker-wrap {
     overflow: hidden;
@@ -669,6 +723,30 @@
       <button class="btn-outline" onclick="document.getElementById('drops').scrollIntoView({behavior:'smooth'})">Discover Drops</button>
     </div>
     <p class="wallet-status" id="wallet"></p>
+
+    <!-- HERO TICKER CARD -->
+    <div class="hero-ticker-card">
+      <div class="htc-item">
+        <span class="htc-label">Status</span>
+        <span class="htc-value"><span class="htc-dot"></span>Live</span>
+      </div>
+      <div class="htc-item">
+        <span class="htc-label">Network</span>
+        <span class="htc-value">Solana</span>
+      </div>
+      <div class="htc-item">
+        <span class="htc-label">Active Drops</span>
+        <span class="htc-value">3</span>
+      </div>
+      <div class="htc-item">
+        <span class="htc-label">Artists</span>
+        <span class="htc-value">12+</span>
+      </div>
+      <div class="htc-item">
+        <span class="htc-label">Volume</span>
+        <span class="htc-value">142 SOL</span>
+      </div>
+    </div>
   </div>
 
   <div class="sound-hint">Move cursor to warp sound field</div>
@@ -992,11 +1070,6 @@
   <div class="footer-right">
     <div class="social-row">
       <a href="https://x.com/synthlabfun" target="_blank" rel="noopener">𝕏 @synthlabfun</a>
-      <div class="orynth-badge">
-        <a href="https://orynth.dev/projects/synthlab" target="_blank" rel="noopener">
-          <img src="https://orynth.dev/api/badge/synthlab?theme=dark&style=default" alt="Featured on Orynth" width="140" height="44">
-        </a>
-      </div>
     </div>
     <div class="footer-links">
       <a href="#drops">Drops</a>
